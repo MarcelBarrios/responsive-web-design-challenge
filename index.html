@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,115 @@
 	<title>Document</title>
 	<style>
 		/* Your styles here! */
-		
+		.main {
+			width: 100%;
+			max-width: 1200px;
+			margin: auto;
+			display: grid;
+			grid-gap: 1rem;
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"a"
+				"b"
+				"c"
+				"d"
+				"e";
+		}
+
+		article {
+			background-color: aquamarine;
+			padding: 1rem;
+			display: flex;
+			flex-direction: column;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		.features-list {
+			justify-self: end;
+			display: flex;
+			flex-direction: row;
+		}
+
+		.features-list div {
+			background-color: aliceblue;
+			margin-left: 1rem;
+			padding: 0.5rem;
+			border-radius: 10%;
+		}
+
+		@media (min-width: 1024px) {
+			.main {
+				width: 100%;
+				max-width: 1200px;
+				margin: auto;
+				display: grid;
+				grid-gap: 1rem;
+				grid-template-columns: 1fr 1fr;
+				grid-template-areas:
+					"a b"
+					"c d"
+					"e f";
+			}
+
+			article {
+				display: flex;
+				flex-direction: row;
+				padding: 1rem;
+			}
+
+			article:nth-child(1) {
+				grid-area: a;
+			}
+
+			article:nth-child(2) {
+				grid-area: b;
+			}
+
+			article:nth-child(3) {
+				grid-area: c;
+			}
+
+			article:nth-child(4) {
+				grid-area: d;
+			}
+
+			article:nth-child(5) {
+				grid-area: e;
+			}
+
+			img {
+				width: 200px;
+				height: auto;
+			}
+
+			.features h1 {
+				font-size: 1.5em;
+			}
+
+			.features {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				padding-top: 4%;
+				padding-left: 2%;
+			}
+
+			.features>h1,
+			p {
+				margin: 2%;
+			}
+
+			.features-list {
+				align-self: flex-end;
+			}
+		}
 	</style>
 </head>
+
 <body>
 
 	<!--  -->
@@ -97,6 +204,7 @@
 			</div>
 		</article>
 	</section>
-	
+
 </body>
+
 </html>
